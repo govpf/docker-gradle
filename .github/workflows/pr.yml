@@ -5,11 +5,11 @@ on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
-#    strategy:
-#      matrix:
-#        versions: [6]
+    strategy:
+      matrix:
+        versions: [6]
     env:
-      repo: "govpf/hello" # Please don't forget to create the repo on Docker Hub
+      repo: "govpf/gradle" # Please don't forget to create the repo on Docker Hub
     steps:
 
     - name: Checkout
@@ -21,7 +21,7 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v3.0.0
       with:
-        context: .
+#        context: .
         context: ./${{ matrix.versions }}
 #        file: ./Dockerfile
         file: ./${{ matrix.versions }}/Dockerfile
