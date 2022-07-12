@@ -8,7 +8,7 @@ RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.
     mv /root/gradle-${GRADLE_VERSION} /usr/local/gradle/ && \
     rm -fr /root/graddle-bin.zip
 
-ENV PATH ${PATH}:/usr/local/gradle/bin
+ENV PATH ${PATH}:/usr/local/gradle/gradle-${GRADLE_VERSION}/bin
 
 VOLUME /software
 VOLUME /root/.gradle
