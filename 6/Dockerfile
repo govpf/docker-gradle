@@ -11,7 +11,7 @@ RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.
 ENV PATH ${PATH}:/usr/local/gradle/gradle-${GRADLE_VERSION}/bin
 
 # Certs
-COPY ../install_certs /tmp/install_certs
+COPY install_certs /tmp/install_certs
 RUN  apk add --no-cache bash && bash -xe /tmp/install_certs
 
 VOLUME /software
