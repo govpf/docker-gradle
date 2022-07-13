@@ -10,9 +10,7 @@ RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.
 
 ENV PATH ${PATH}:/usr/local/gradle/gradle-${GRADLE_VERSION}/bin
 
-# Certs
-COPY install_certs /tmp/install_certs
-RUN  apk add --no-cache bash && bash -xe /tmp/install_certs
+RUN mv /cacerts /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/cacerts
 
 VOLUME /software
 VOLUME /root/.gradle
