@@ -1,4 +1,4 @@
-FROM govpf/openjdk:8-jre
+FROM govpf/openjdk:8-jdk
 
 ENV GRADLE_VERSION "6.9.1"
 
