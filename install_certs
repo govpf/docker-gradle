@@ -12,7 +12,9 @@ CERT_URLS="$CA_ARTIFACTORY_URL/casit.crt \
     $CA_CERTIGNA_URL/certignarootca.crt \
     $CA_CERTIGNA_URL/wildca.der \
     $CA_CERTIGNA_URL/certigna.der \
-    $CA_CERTIGNA_URL/servicesca.crt"
+    $CA_CERTIGNA_URL/servicesca.crt \
+    $CA_ARTIFACTORY_URL/Bundle_certificat_certigna.crt \
+    $CA_ARTIFACTORY_URL/CertignaServerAuthenticationOVCPCAG1.crt"
 
 for cert_url in $CERT_URLS
 do
