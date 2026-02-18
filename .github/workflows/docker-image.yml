@@ -32,8 +32,6 @@ jobs:
       uses: docker/build-push-action@v6.0.2
       with:
         context: .
-#        context: ./${{ matrix.versions }}
-#        file: ./Dockerfile
         file: ./${{ matrix.versions }}/Dockerfile
         platforms: linux/amd64
         pull: true
