@@ -10,7 +10,7 @@ RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.
 
 ENV PATH="${PATH}:/usr/local/gradle/gradle-${GRADLE_VERSION}/bin"
 
-RUN mv /cacerts /opt/java/openjdk/lib/security/cacerts
+RUN mv /cacerts /opt/java/openjdk/jre/lib/security/cacerts
 
 VOLUME /software
 VOLUME /root/.gradle
