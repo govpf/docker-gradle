@@ -1,6 +1,6 @@
-FROM govpf/openjdk:8-jdk
+FROM govpf/openjdk:8-jdk-alpine
 
-ENV GRADLE_VERSION "6.9.1"
+ENV GRADLE_VERSION="6.9.1"
 
 RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -O /root/gradle-bin.zip && \
     mkdir /usr/local/gradle && \
@@ -8,7 +8,7 @@ RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.
     mv /root/gradle-${GRADLE_VERSION} /usr/local/gradle/ && \
     rm -fr /root/graddle-bin.zip
 
-ENV PATH ${PATH}:/usr/local/gradle/gradle-${GRADLE_VERSION}/bin
+ENV PATH="${PATH}:/usr/local/gradle/gradle-${GRADLE_VERSION}/bin"
 
 RUN mv /cacerts /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/cacerts
 
