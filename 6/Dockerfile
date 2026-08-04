@@ -1,5 +1,8 @@
 FROM govpf/openjdk:8-jdk-alpine
 
+LABEL govpf.fromimage="govpf/openjdk:8-jdk-alpine"
+LABEL govpf.category="build"
+
 ENV GRADLE_VERSION="6.9.1"
 
 RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -O /root/gradle-bin.zip && \
